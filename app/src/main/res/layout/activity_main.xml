@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#455A64"
+    tools:context="com.speedyapps.shaftx.MainActivity">
+
+
+    <Button
+        android:id="@+id/previous"
+        style="@android:style/Widget.Material.Button.Inset"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClick"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#039BE5"
+        android:text="Previous" />
+
+    <Button
+        android:id="@+id/next"
+        style="@android:style/Widget.Material.Button.Inset"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="#039BE5"
+        android:text="Next" />
+
+    <FrameLayout
+        android:id="@+id/frameFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/previous"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+    </FrameLayout>
+
+</RelativeLayout>
