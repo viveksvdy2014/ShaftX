@@ -7,6 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 /**
@@ -18,6 +21,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class FirstPageFragment extends Fragment {
+    public static messageSender messagesender;
+    public static EditText bearingsDistance,bearingNGear,gearNPully,pulleyNBearing,pulleyDiameter,gearDiameter;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -61,10 +66,33 @@ public class FirstPageFragment extends Fragment {
     }
 
     @Override
+    public void onAttach(Context context) {
+        messagesender=(messageSender)context;
+        super.onAttach(context);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_page, container, false);
+        View view = inflater.inflate(R.layout.fragment_first_page, container, false);
+        bearingsDistance=(EditText)view.findViewById(R.id.bearings);
+        bearingNGear=(EditText)view.findViewById(R.id.bearngear);
+        gearNPully=(EditText)view.findViewById(R.id.gearnpulley);
+        pulleyNBearing=(EditText)view.findViewById(R.id.pullynbearing);
+        pulleyDiameter=(EditText)view.findViewById(R.id.pullydia);
+        gearDiameter=(EditText)view.findViewById(R.id.geardia);
+        Button NextButton = (Button)getActivity().findViewById(R.id.next);
+        NextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(bearingsDistance.getText().toString().equals("")||bearingNGear.getText().toString().equals("")||gearNPully.getText().toString().equals("")||pulleyNBearing.getText().toString().equals("")||pulleyDiameter.getText().toString().equals("")||gearDiameter.getText().toString().equals(""))
+                    Toast.makeText(getActivity(), "Please Enter Valid Input!", Toast.LENGTH_SHORT).show();
+                else
+                    messagesender.firstFragmentReceiver(Integer.parseInt(bearingsDistance.getText().toString()),Integer.parseInt(bearingNGear.getText().toString()),Integer.parseInt(gearNPully.getText().toString()),Integer.parseInt(pulleyNBearing.getText().toString()),Integer.parseInt(pulleyDiameter.getText().toString()),Integer.parseInt(gearDiameter.getText().toString()));
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -94,4 +122,8 @@ public class FirstPageFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+    public interface messageSender {
+        void firstFragmentReceiver(int val1,int val2,int val3,int val4,int val5,int val6);
+    }
 }
+

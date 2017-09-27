@@ -6,7 +6,7 @@
     tools:context="com.speedyapps.shaftx.FirstPageFragment">
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/bearngear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView5"
@@ -15,58 +15,58 @@
         android:layout_toEndOf="@+id/textView4"
         android:layout_toRightOf="@+id/textView4"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/geardia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText10"
+        android:layout_alignLeft="@+id/pullynbearing"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignStart="@+id/editText10"
+        android:layout_alignStart="@+id/pullynbearing"
         android:layout_below="@+id/textView10"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
 
     <EditText
-        android:id="@+id/editText12"
+        android:id="@+id/pullydia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText7"
+        android:layout_above="@+id/geardia"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_toEndOf="@+id/textView11"
         android:layout_toRightOf="@+id/textView11"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/pullynbearing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText8"
+        android:layout_alignLeft="@+id/gearnpulley"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignStart="@+id/editText8"
+        android:layout_alignStart="@+id/gearnpulley"
         android:layout_alignTop="@+id/textView8"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/gearnpulley"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -75,7 +75,7 @@
         android:layout_toEndOf="@+id/textView4"
         android:layout_toRightOf="@+id/textView4"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
@@ -90,7 +90,7 @@
         android:layout_below="@+id/textView3"
         android:textColorHint="#FFFFFF"
         android:layout_marginTop="11dp"
-        android:layout_toStartOf="@+id/editText3"
+        android:layout_toStartOf="@+id/bearings"
         android:paddingLeft="5dp"
         android:paddingTop="8dp"
         android:text="Two Bearings   (mm)"
@@ -99,7 +99,7 @@
         android:layout_alignEnd="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/bearings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView4"
@@ -109,7 +109,7 @@
         android:layout_toEndOf="@+id/textView6"
         android:layout_toRightOf="@+id/textView6"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
@@ -140,11 +140,11 @@
         android:paddingTop="8dp"
         android:text="Gear and Pulley (mm)"
         android:textSize="17sp"
-        android:layout_below="@+id/editText5"
+        android:layout_below="@+id/bearngear"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/editText7"
-        android:layout_toStartOf="@+id/editText7" />
+        android:layout_toLeftOf="@+id/geardia"
+        android:layout_toStartOf="@+id/geardia" />
 
     <TextView
         android:id="@+id/textView6"
@@ -169,9 +169,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView10"
-        android:layout_toLeftOf="@+id/editText7"
+        android:layout_toLeftOf="@+id/geardia"
         android:textColor="#FFFFFF"
-        android:layout_toStartOf="@+id/editText7"
+        android:layout_toStartOf="@+id/geardia"
         android:paddingLeft="5dp"
         android:paddingTop="8dp"
         android:text="Gear (mm)"
@@ -200,8 +200,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/editText7"
-        android:layout_toStartOf="@+id/editText7"
+        android:layout_toLeftOf="@+id/geardia"
+        android:layout_toStartOf="@+id/geardia"
         android:textColor="#FFFFFF"
         android:paddingLeft="5dp"
         android:paddingTop="8dp"
@@ -216,8 +216,8 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="11dp"
-        android:layout_toLeftOf="@+id/editText5"
-        android:layout_toStartOf="@+id/editText5"
+        android:layout_toLeftOf="@+id/bearngear"
+        android:layout_toStartOf="@+id/bearngear"
         android:textColor="#FFFFFF"
         android:paddingLeft="5dp"
         android:paddingTop="8dp"
